@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cumple Sin Azúcar: torta, mesa dulce y menú para el cumple de 1 a 4 años</title>
+<meta name="description" content="28 recetas sin azúcar agregada, 4 menús armados, lista de compras y checklist de 30 días para el cumple de tu peque.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!--
+  CÓMO EDITAR
+  "No gracias": buscá SKIP_URL y apuntalo a tu página de confirmación.
+-->
+
+<style>
+:root{
+  --ink:#23214F;
+  --berry:#E8385B;
+  --berry-dark:#C42546;
+  --butter:#FFE7A3;
+  --mint:#CDEFE0;
+  --paper:#FBFAFF;
+  --lilac:#F0EDFB;
+  --line:#DAD5F0;
+  --muted:#5B587F;
+  --radius:22px;
+  --display:"Bricolage Grotesque","Trebuchet MS","Segoe UI",system-ui,sans-serif;
+  --body:"DM Sans","Segoe UI",system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:env(safe-area-inset-bottom,0)}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--display);line-height:1.08;margin:0 0 .5em;letter-spacing:-.02em}
+h1{font-size:clamp(2.4rem,5.8vw,4rem);font-weight:800}
+h2{font-size:clamp(1.7rem,3.6vw,2.6rem);font-weight:800}
+h3{font-size:1.2rem;font-weight:600;letter-spacing:-.01em}
+p{margin:0 0 1em;max-width:62ch}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--berry);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+section{padding:clamp(48px,8vw,90px) 0}
+.alt{background:var(--lilac)}
+.lead{font-size:1.15rem;color:var(--muted)}
+.center{text-align:center}.center p{margin-inline:auto}
+
+/* ── BARRA SUPERIOR STICKY ── */
+.top-nav{position:sticky;top:0;z-index:40}
+.step-bar{
+  background:linear-gradient(90deg,#185e20 0%,#2a8233 100%);
+  color:#fff;
+  padding-top:calc(10px + env(safe-area-inset-top,0));
+  padding-bottom:10px;
+}
+.step-bar-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.confirm{display:flex;align-items:center;gap:10px;font-weight:700;font-size:.98rem}
+.checkmark{
+  width:26px;height:26px;background:#fff;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  color:#185e20;font-weight:900;font-size:.85rem;flex-shrink:0;
+}
+.steps{display:flex;align-items:center;gap:6px}
+.step{font-family:var(--display);font-size:.78rem;font-weight:800;padding:5px 13px;border-radius:999px;white-space:nowrap}
+.step-done{background:rgba(255,255,255,.18);color:rgba(255,255,255,.6);text-decoration:line-through}
+.step-now{background:#fff;color:#185e20}
+.step-next{background:rgba(255,255,255,.09);color:rgba(255,255,255,.4)}
+.chevron{color:rgba(255,255,255,.35);font-size:.8rem}
+
+header{background:rgba(251,250,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:56px}
+.brand{font-family:var(--display);font-weight:800;font-size:1.15rem;text-decoration:none;letter-spacing:-.02em}
+
+/* ── BOTONES ── */
+.btn{
+  display:inline-block;background:var(--berry);color:#fff;font-weight:700;
+  font-size:1.05rem;text-decoration:none;padding:15px 28px;border-radius:999px;
+  border:0;cursor:pointer;transition:background .2s,transform .2s;
+  font-family:var(--body);line-height:1.2;
+}
+.btn:hover{background:var(--berry-dark);transform:translateY(-2px)}
+.btn-sm{padding:9px 18px;font-size:.9rem}
+.skip-link{font-size:.88rem;color:var(--muted);text-decoration:underline;text-underline-offset:3px;display:inline-block;margin-top:14px;cursor:pointer}
+.small{font-size:.9rem;color:var(--muted)}
+
+/* ── IMAGEN HERO ── */
+.slot{position:relative;border-radius:var(--radius);overflow:hidden;background:repeating-linear-gradient(135deg,#fff,#fff 14px,var(--lilac) 14px,var(--lilac) 28px);border:2px dashed var(--berry);aspect-ratio:var(--ar,4/3)}
+.slot img{width:100%;height:100%;object-fit:cover}
+.slot:has(img){border:0;background:var(--lilac)}
+
+/* ── HERO ── */
+.hero{padding-top:clamp(32px,5vw,60px)}
+.hero-grid{display:grid;gap:clamp(24px,5vw,60px);grid-template-columns:1.15fr .85fr;align-items:center}
+.hero h1 mark{background:linear-gradient(transparent 60%,var(--butter) 60%);color:inherit;padding:0 .04em}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:7px;
+  background:var(--mint);border-radius:999px;padding:5px 14px;
+  font-size:.88rem;font-weight:700;color:#185e20;margin-bottom:14px;
+}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:22px 0 10px}
+.hero .slot{--ar:4/5}
+
+/* ── CARRUSEL ── */
+.carousel-wrap{position:relative;margin-top:24px}
+.carousel-track{
+  display:flex;gap:16px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+  padding-bottom:14px;
+  scrollbar-width:thin;
+  scrollbar-color:var(--berry) var(--lilac);
+}
+.carousel-track::-webkit-scrollbar{height:5px}
+.carousel-track::-webkit-scrollbar-track{background:var(--lilac);border-radius:999px}
+.carousel-track::-webkit-scrollbar-thumb{background:var(--berry);border-radius:999px}
+.card{
+  flex:0 0 260px;scroll-snap-align:start;
+  background:#fff;border:2px solid var(--line);border-radius:20px;padding:22px;
+}
+.card-icon{font-size:1.5rem;margin-bottom:6px}
+.card h3{font-size:1.05rem;margin-bottom:.35em}
+.card ul{margin:0;padding-left:1.1em}
+.card li{font-size:.9rem;margin-bottom:3px}
+
+/* ── OFERTA ── */
+.offer{background:var(--ink);color:#fff}
+.offer h2{color:#fff;font-size:clamp(1.4rem,3vw,2.1rem)}
+.offer h2 .precio{color:var(--butter)}
+.offer h2 .pipe{opacity:.3;margin:0 6px;font-weight:300}
+.offer-box{
+  background:#fff;color:var(--ink);border-radius:26px;
+  display:grid;grid-template-columns:1fr 1fr;
+  overflow:hidden;
+  max-width:940px;margin:30px auto 0;
+}
+.offer-img{
+  display:flex;align-items:center;justify-content:center;
+  background:var(--lilac);min-height:340px;
+}
+.offer-img img{width:100%;height:100%;object-fit:contain;display:block}
+.offer-payment{
+  padding:clamp(24px,4vw,48px);
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;
+}
+.urgency{
+  background:rgba(255,231,163,.13);border:1px solid rgba(255,231,163,.28);
+  border-radius:12px;padding:12px 20px;display:flex;align-items:center;gap:10px;
+  max-width:940px;margin:14px auto 0;font-size:.92rem;color:#C9C6EE;text-align:left;
+}
+.guarantee{max-width:940px;margin:16px auto 0;color:#C9C6EE;font-size:.9rem;text-align:center}
+.guarantee p{margin-inline:auto}
+
+/* ── CIERRE ── */
+.final{text-align:center}
+.final h2{max-width:18ch;margin-inline:auto}
+
+footer{padding:30px 0 100px;font-size:.88rem;color:var(--muted)}
+footer p{max-width:72ch;margin-inline:auto;text-align:center}
+
+.sticky{display:none}
+
+@media(max-width:780px){
+  body{font-size:16px}
+  .hero-grid,.offer-box{grid-template-columns:1fr}
+  .hero .slot{--ar:4/3;order:-1}
+  .step-bar-inner{flex-direction:column;gap:6px;text-align:center}
+  .confirm{justify-content:center;font-size:.85rem}
+  .step{font-size:.7rem;padding:4px 10px}
+  .bar .btn{display:none}
+  .offer-img{min-height:220px}
+  .sticky{
+    display:block;position:fixed;left:0;right:0;bottom:0;z-index:30;
+    background:#fff;border-top:1px solid var(--line);
+    padding:10px 16px calc(10px + env(safe-area-inset-bottom,0));
+    box-shadow:0 -6px 20px rgba(35,33,79,.08);
+  }
+  .sticky .btn{display:block;text-align:center;padding:13px}
+}
+</style>
+</head>
+<body>
+
+<!-- ══ BARRA PASO 2 DE 3 ══ -->
+<div class="top-nav">
+  <div class="step-bar">
+    <div class="wrap step-bar-inner">
+      <div class="confirm">
+        <span class="checkmark">✓</span>
+        <span>¡Tu compra fue aprobada! — Te falta un paso para completar tu pedido</span>
+      </div>
+      <div class="steps" aria-label="Progreso del pedido">
+        <span class="step step-done">✓ Paso 1: Recetas</span>
+        <span class="chevron">›</span>
+        <span class="step step-now">📍 Paso 2 de 3</span>
+        <span class="chevron">›</span>
+        <span class="step step-next">Paso 3: ¡Listo!</span>
+      </div>
+    </div>
+  </div>
+  <header>
+    <div class="wrap bar">
+      <a class="brand" href="#top">Cumple Sin Azúcar</a>
+      <a class="btn btn-sm" href="#oferta">Agregar al pedido</a>
+    </div>
+  </header>
+</div>
+
+<main id="top">
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="hero-badge">📍 Paso 2 de 3 — Oferta exclusiva — Finaliza en 5 minutos.</div>
+      <h1>El cumple de tu peque, sin azúcar y <mark>sin estrés</mark>.</h1>
+      <p class="lead">Torta, mesa dulce, finger food, menú para invitados, lista de compras y cuenta regresiva de 30 días. Todo resuelto para cumples de 1 a 4 años.</p>
+      <div class="hero-cta">
+        <a class="btn" href="#oferta">Sí, quiero el pack Cumple →</a>
+      </div>
+      <p class="small">Se agrega a tu compra anterior. Pago único. Acceso inmediato.</p>
+    </div>
+    <div class="slot">
+      <img src="https://tiendaconectada0.wordpress.com/wp-content/uploads/2026/09/chatgpt-image-29-sept-2026-23_26_20.png" alt="Torta con velita para el primer cumpleaños, sin azúcar">
+    </div>
+  </div>
+</section>
+
+<!-- ══ QUÉ INCLUYE — CARRUSEL HORIZONTAL ══ -->
+<section class="alt">
+  <div class="wrap">
+    <h2>Todo lo que viene en el pack.</h2>
+    <p class="lead">28 recetas con ingredientes, pasos, tiempos, porciones, edad recomendada y alérgenos.</p>
+    <div class="carousel-wrap">
+      <div class="carousel-track">
+        <div class="card">
+          <div class="card-icon">🎂</div>
+          <h3>5 tortas + 4 cupcakes</h3>
+          <ul>
+            <li>Smash cake de banana y avena</li>
+            <li>Zanahoria con frosting de queso crema</li>
+            <li>Chocolate de algarroba con crema de palta</li>
+            <li>Naranja y yogur</li>
+            <li>Frutillas y crema</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-icon">🍡</div>
+          <h3>Mesa dulce (7 recetas)</h3>
+          <ul>
+            <li>Alfajorcitos de avena con dulce de dátiles</li>
+            <li>Bocaditos de dátiles y coco</li>
+            <li>Gelatina casera de naranja</li>
+            <li>Paletas heladas de yogur y frutilla</li>
+            <li>Arcoíris de frutas</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-icon">🥙</div>
+          <h3>Finger food + bebidas (11 recetas)</h3>
+          <ul>
+            <li>Mini pizzetas, empanaditas y bastones de batata</li>
+            <li>Bocaditos de pollo y calabaza</li>
+            <li>Ensalada de pasta para adultos</li>
+            <li>Limonada de menta y agua saborizada</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-icon">📋</div>
+          <h3>Organización completa</h3>
+          <ul>
+            <li>4 menús para 10, 20 y 30 invitados</li>
+            <li>Lista de compras con cantidades exactas</li>
+            <li>Cuenta regresiva de 30 días</li>
+            <li>Guía de conservación y congelado</li>
+            <li>Tarjetitas imprimibles para la mesa</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ OFERTA ══ -->
+<section class="offer" id="oferta">
+  <div class="wrap center">
+    <h2>
+      Agregalo ahora, a <span class="precio">PRECIO ESPECIAL</span> por ser cliente
+      <span class="pipe">|</span> desaparece cuando salís de esta página <span class="pipe">|</span>
+    </h2>
+
+    <div class="offer-box">
+      <!-- IMAGEN completa, sin recortar -->
+      <div class="offer-img">
+        <img
+          src="https://tiendaconectada0.wordpress.com/wp-content/uploads/2026/09/gemini_generated_image_zejcurzejcurzejc.jpg"
+          alt="Contenido del pack Cumple Sin Azúcar">
+      </div>
+
+      <!-- HOTMART WIDGET centrado -->
+      <div class="offer-payment">
+        <!-- HOTMART - Sales Funnel Widget -->
+        <!--- sales funnel container --->
+        <div id="hotmart-sales-funnel"></div>
+
+        <!--- script load and setup --->
+        <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+        <script>
+        checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
+        </script>
+        <!-- HOTMART - Sales Funnel Widget -->
+      </div>
+    </div>
+
+    <div class="urgency">
+      <span>⏳</span>
+      <span>Esta oferta desaparece cuando cerrás o salís de esta página. No se repite.</span>
+    </div>
+    <div class="guarantee">
+      <p>Garantía de 7 días. Si no es lo que esperabas, te devolvemos tu dinero sin preguntas.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CIERRE ══ -->
+<section class="alt final">
+  <div class="wrap">
+    <h2>Que el único trabajo sea disfrutar el cumple.</h2>
+    <p class="lead">Elegí el menú, seguí la cuenta regresiva y dejá que tu peque destruya la torta.</p>
+    <a class="btn" href="#oferta">Agregar el pack Cumple →</a>
+    <!-- SKIP_URL — reemplazá "#" por tu URL de thank-you/confirmación -->
+    <a class="skip-link" href="#">No gracias, continuar sin el pack Cumple</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Este producto ofrece ideas de recetas y organización y no reemplaza la consulta con tu pediatra. Antes de introducir alimentos nuevos, especialmente si hay antecedentes de alergias, consultá con el profesional que acompaña a tu peque.</p>
+  </div>
+</footer>
+
+<div class="sticky">
+  <a class="btn" href="#oferta">Agregar al pedido →</a>
+</div>
+
+</body>
+</html>
